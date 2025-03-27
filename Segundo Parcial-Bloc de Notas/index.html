@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog Personal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Blog Personal</h1>
+        <button id="addArticleBtn" class="btn">+ Nuevo Artículo</button>
+    </header>
+
+    <main id="mainContent">
+        <section id="articlesList">
+            <!-- Los artículos se generarán dinámicamente con JavaScript -->
+        </section>
+
+        <section id="addArticleForm" class="hidden">
+            <h2>Nuevo Artículo</h2>
+            <form id="articleForm">
+                <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Imagen del artículo:</label>
+                    <input type="file" id="image" accept="image/*" required>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Descripción:</label>
+                    <textarea id="description" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Autor:</label>
+                    <input type="text" id="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Fecha de publicación:</label>
+                    <input type="date" id="date" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mi Blog Personal. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
